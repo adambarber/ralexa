@@ -6,7 +6,15 @@ module Ralexa
       result({"ResponseGroup" => "Rank", "Url" => url}, params) do |document|
         document.at("//UrlInfoResult/Alexa/TrafficData/Rank") &&
           document.at("//UrlInfoResult/Alexa/TrafficData/Rank").text.to_i
-      end 
+      end
+    end
+
+    def info(url, params = {})
+      result
+      # result({"ResponseGroup" => "Rank", "Url" => url}, params) do |document|
+#         document.at("//UrlInfoResult/Alexa/TrafficData/Rank") &&
+#           document.at("//UrlInfoResult/Alexa/TrafficData/Rank").text.to_i
+#       end
     end
 
     private
